@@ -1,9 +1,5 @@
 import styled from '@emotion/styled'
 
-export const Container = styled.div`
-margin: 30px 0px 0px 30px;
-`
-
 export const ButtonUl = styled.ul`
 display:flex;
 `
@@ -19,17 +15,8 @@ cursor:pointer;
 }
 `
 
-export const StatisticsUl = styled.ul`
-list-style:none;
-`
-
-export const Span = styled.span`
+export const SpanTitle = styled.span`
 margin-left:20px;
 font-size:20px;
 font-weight: 500;
-`
-
-export const StatisticLi = styled.li`
-font-size:20px;
-margin-bottom:10px;
 `
