@@ -1,14 +1,14 @@
 import {ButtonUl,Button,SpanTitle} from './FeedbackOptionsStyled'
 
 
-const FeedbackOptions = ({onLeaveFeedback}) =>{
+const FeedbackOptions = ({onLeaveFeedback,options}) =>{
    return (
     <>
     <SpanTitle>Please leave feedback</SpanTitle>
         <ButtonUl >
-            <Button onClick={onLeaveFeedback}>Good</Button>
-            <Button onClick={onLeaveFeedback}>Neutral</Button>
-            <Button onClick={onLeaveFeedback}>Bad</Button>
+            {options.map(
+                option =>  
+                <Button key={option} onClick={onLeaveFeedback}>{option}</Button>)}
         </ButtonUl>
         </>
    )
