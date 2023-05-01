@@ -1,11 +1,9 @@
 import React from 'react'
-import {StatisticsUl,StatisticLi,SpanTitle} from './StatisticsStyled';
+import {StatisticsUl,StatisticLi} from './StatisticsStyled';
 import PropTypes from 'prop-types'
 
 const Statistics = ({good,neutral,bad,total,positivePercentage}) =>{ 
     return (
-        <>
-        <SpanTitle>Statistics</SpanTitle>
         <StatisticsUl >
             <StatisticLi>Good:{good}</StatisticLi>
             <StatisticLi>Neutral:{neutral}</StatisticLi>
@@ -15,7 +13,6 @@ const Statistics = ({good,neutral,bad,total,positivePercentage}) =>{
                     Positive feedback:{positivePercentage+'%'}
                 </StatisticLi>
         </StatisticsUl>
-        </>
     ) 
 };
 

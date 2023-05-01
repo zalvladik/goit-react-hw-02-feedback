@@ -1,7 +1,9 @@
 import Statistics from './Statistics/Statistics'
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions'
+import Notification from './Notification/Notification'
+import Section from './Section/Section'
 import React from 'react'
-import {Container,Notification,Section} from './AppStyled'
+import {Container} from './AppStyled'
 
 class App extends React.Component{
   state = {
@@ -34,16 +36,15 @@ class App extends React.Component{
     const{good,neutral,bad} = this.state
     return (
   <Container>
-    <Section title="Please leave feedback">
-          <FeedbackOptions 
-                options={Object.keys(this.state)}
-                onLeaveFeedback={this.onLeaveFeedback}
-          />
+    <Section title={"Please leave feedback"}>
+        <FeedbackOptions 
+                        options={Object.keys(this.state)}
+                        onLeaveFeedback={this.onLeaveFeedback}
+        />        
     </Section>
 
-
     {this.countTotalFeedback() > 0 ? (
-      <Section title='Statistics'>
+      <Section title={'Statistics'}>
       <Statistics  
       good={good} 
       neutral={neutral}
@@ -53,7 +54,9 @@ class App extends React.Component{
       />
 </Section>
     ) : (
-      <Notification>There is no feedback</Notification>
+      <Notification
+      message = {"There is no feedback"}
+      />
     )}
     
   </Container>
@@ -62,3 +65,6 @@ class App extends React.Component{
 };
 
 export default App
+
+
+

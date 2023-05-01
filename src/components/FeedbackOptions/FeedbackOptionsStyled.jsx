@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-export const ButtonUl = styled.ul`
+export const ButtonDiv = styled.div`
 display:flex;
 `
 export const Button = styled.button`
@@ -13,10 +13,4 @@ cursor:pointer;
 &:hover{
     background-color:#0b9ca3;
 }
-`
-
-export const SpanTitle = styled.span`
-margin-left:20px;
-font-size:20px;
-font-weight: 500;
 `
